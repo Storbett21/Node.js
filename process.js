@@ -2,7 +2,7 @@
 
 //tiene argumetos de entrada
 
-console.log(process.argv)
+// console.log(process.argv)
 
 //controlar el proceso
 //process.exit(1)
@@ -15,3 +15,7 @@ console.log(process.argv)
 
 console.log(process.cwd())
 
+// plataforma 
+// las variables mas usadas son las variables de entorno
+
+console.log(process.env.algo)
