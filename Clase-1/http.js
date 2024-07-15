@@ -25,7 +25,7 @@
 
 const puerto = process.env.PORT ?? 3000
 const http = require('node:http');
-const {findAvailablePort} = require('./free-port.js');
+const {findAvailablePort} = require('./free-port');
 
 const server = http.createServer((req,res) => {
     console.log('request received')
