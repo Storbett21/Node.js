@@ -33,7 +33,7 @@ const processRequest = (req, res) => {
                         const data = JSON.parse(body) // aqui podremos hacer cualquier cosa, desde llamar a una base de datos para guardar la info 
                         res.writeHead(201, { 'Content-Type': 'application/json; charset=utf-8' })
 
-                        data.timestamp = Date.now()
+                        data.timestamp = Date.now()  // para ver cuando se creo este recurso
                         res.end(JSON.stringify(data))
                     })
                     break

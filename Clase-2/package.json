@@ -5,7 +5,8 @@
   "main": "./1.http.js",
   "scripts": {
     "dev1": "nodemon ./1.http.js",
-    "dev2": "nodemon rutas.js"
+    "dev2": "nodemon rutas.js",
+    "dev3": "node --watch express.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/Storbett21/Node.js#readme",
   "dependencies": {
+    "express": "4.19.2",
     "picocolors": "1.0.1"
   },
   "devDependencies": {
