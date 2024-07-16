@@ -1,0 +1,32 @@
+{
+  "name": "curso-node",
+  "version": "1.0.0",
+  "description": "El mejor curso de Node gratis",
+  "main": "./1.http.js",
+  "scripts": {
+    "dev": "nodemon ./1.http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Storbett21/Node.js.git"
+  },
+  "keywords": [
+    "curso",
+    "node",
+    "nodejs",
+    "storbett"
+  ],
+  "author": "Midudev-Storbett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Storbett21/Node.js/issues"
+  },
+  "homepage": "https://github.com/Storbett21/Node.js#readme",
+  "dependencies": {
+    "picocolors": "1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "standard": "17.1.0"
+  }
+}
