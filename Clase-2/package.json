@@ -4,7 +4,8 @@
   "description": "El mejor curso de Node gratis",
   "main": "./1.http.js",
   "scripts": {
-    "dev": "nodemon ./1.http.js"
+    "dev1": "nodemon ./1.http.js",
+    "dev2": "nodemon rutas.js"
   },
   "repository": {
     "type": "git",
