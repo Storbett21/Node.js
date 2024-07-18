@@ -1,11 +1,22 @@
 const express = require('express');
+const movies = require('./movies.json');
 
 const app = express();
 app.disable('x-powered-by');
 
-app.get('/', (req, res) => {
-res.json({ message: "Hola Simon"})
+
+app.get('/movies', (req, res) => {
+    res.json(movies)
 })
+
+app.get('/movies/:id', (req, res) => {   // como acceder al id de todas formas... path-to-regexp <-- biblioteca
+
+    const { id } = req.params
+
+})
+
+
+
 
 const PORT = process.env.PORT ?? 1234
 
