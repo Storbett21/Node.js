@@ -1,7 +1,9 @@
 const express = require('express');
+const crypto = require('node:crypto');
 const movies = require('./movies.json');
 
 const app = express();
+app.use(express.json());
 app.disable('x-powered-by');
 
 
@@ -24,6 +26,32 @@ app.get('/movies/:id', (req, res) => {   // como acceder al id de todas formas..
     if (movie) return res.json(movie)
     
     res.status(404).json({message: 'movie not found'})
+
+})
+
+app.post('/movies',(req, res) => {
+const {
+title,
+genre,
+year,
+director,
+duration,
+rate,
+poster
+
+} = req.body
+const newMovie = {
+
+    id: crypto.randomUUID(), // UUIID IDENTIFICADOR UNICO UNIVERSAL
+    title,
+    genre,
+    year,
+    director,
+    duration,
+    poster
+}
+movies.push(newMovie)
+res.status(201).json(newMovie)
 
 })
 
