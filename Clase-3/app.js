@@ -1,7 +1,8 @@
 const express = require('express');
 const crypto = require('node:crypto');
 const movies = require('./movies.json');
-const z = require('zod');
+const { validateMovie} = require('./schemas/movies')
+
 
 const app = express();
 app.use(express.json());
@@ -31,27 +32,17 @@ app.get('/movies/:id', (req, res) => {   // como acceder al id de todas formas..
 })
 
 app.post('/movies',(req, res) => {
-const {
-title,
-genre,
-year,
-director,
-duration,
-rate,
-poster
 
-} = req.body
+const result = validateMovie(req.body)
 
+if (result.error) {
+    return res.status(404).json({error: JSON.parse(result.error.message)})
+}
 
 const newMovie = {
 
     id: crypto.randomUUID(), // UUIID IDENTIFICADOR UNICO UNIVERSAL
-    title,
-    genre,
-    year,
-    director,
-    duration,
-    poster
+    ...result.data
 }
 movies.push(newMovie)
 res.status(201).json(newMovie)
