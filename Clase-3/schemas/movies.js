@@ -21,8 +21,14 @@ genre: z.array(
 )
 })
 
-function validateMovie (object){
-    return movieSchema.safeParse(object)
+function validateMovie (input){
+    return movieSchema.safeParse(input)
 }
 
-module.exports = {validateMovie}
+function validatePartialMovie (input) {
+    return movieSchema.partial().safeParse(input)
+}
+
+module.exports = {validateMovie,
+    validatePartialMovie
+}
