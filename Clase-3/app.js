@@ -1,6 +1,7 @@
 const express = require('express');
 const crypto = require('node:crypto');
 const movies = require('./movies.json');
+const z = require('zod');
 
 const app = express();
 app.use(express.json());
@@ -40,6 +41,8 @@ rate,
 poster
 
 } = req.body
+
+
 const newMovie = {
 
     id: crypto.randomUUID(), // UUIID IDENTIFICADOR UNICO UNIVERSAL
