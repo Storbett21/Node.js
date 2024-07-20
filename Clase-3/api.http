@@ -16,7 +16,7 @@ POST  http://localhost:1234/movies
 Content-Type: application/json
 
 {  
-  "sql": "SELECT * FROM users",
+  
   "title": "The Godfather",
   "year": 1975,
   "director": "Francis Ford Coppola",
@@ -26,5 +26,15 @@ Content-Type: application/json
     "Crime",
     "Drama"
   ]
+
+}
+
+### actualizar una pelicula
+
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+"year" : 2022
 
 }
