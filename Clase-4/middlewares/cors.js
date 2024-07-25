@@ -4,7 +4,7 @@ const ACCEPTED_ORIGINS = [
   'http://localhost:8080',
   'http://localhost:1234',
   'https://movies.com',
-  'https://midu.dev'
+  'https://Storbett.dev'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
