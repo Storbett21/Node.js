@@ -9,6 +9,20 @@
 
         const socket = io() 
 
+        const form = document.getElementById('form')
+
+        const input = document.getElementById('input')
+        form.addEventListener('submit', (e) => {
+
+            e.preventDefault()
+
+        if (input.value) {
+            socket.emit ('chat message', input.value)
+            input.value = ''
+        }
+        
+    })
+
     </script>
 
     <style>
@@ -70,7 +84,7 @@
         }
     
         #input {
-          border-radius: 9999px;
+          border-radius: 999px;
           border: 1px solid #eee;
           flex: 1;
           margin: 4px;
