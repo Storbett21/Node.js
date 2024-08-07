@@ -23,7 +23,7 @@ res.sendFile(process.cwd()+'/cliente/index.html')
 
 })
 
-erver.listen(port, () =>{
+server.listen(port, () =>{
     console.log(`Server running port ${port}`)
 
 })
