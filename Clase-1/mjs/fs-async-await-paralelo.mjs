@@ -20,4 +20,4 @@ Promise.all([
 // console.log ('leyendo el segundo archivo...')
 // const secontext = await readFile('./segundo-archivo.txt', 'utf-8')
 //     console.log ('segundo texto:', secontext)
-//         console.log ('segundo texto', text) 
+//         console.log ('segundo texto')
