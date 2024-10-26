@@ -14,14 +14,14 @@
 
 // const server = http.createServer((req,res) => {
 //     console.log('request received')
-//     res.end("hola mundo")
+//     res.end("hola Simon")
     
 // })
 
 // server.listen(0, () => {
 //     console.log(`server listening on port http://localhost:${server.address().port}`)
 // })
-// truco para usar un puerto vacio
+//       Truco para usar un puerto vacio 
 
 const puerto = process.env.PORT ?? 3000
 const http = require('node:http');
